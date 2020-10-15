@@ -5,10 +5,15 @@ verify_ssl = true
 
 [dev-packages]
 ipykernel = "*"
+pytest = "*"
 
 [packages]
 pandas = "*"
 glob3 = "*"
+fastapi = "*"
+uvicorn = "*"
+plotly = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
