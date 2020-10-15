@@ -18,7 +18,8 @@ def test_valid_input():
     )
     body = response.json()
     assert response.status_code == 200
-    assert body['prediction'] in [True, False]
+    assert body['prediction'] in ['It will work!',
+                                  'Think of something else...']
     assert 0.50 <= body['probability'] < 1
 
 
