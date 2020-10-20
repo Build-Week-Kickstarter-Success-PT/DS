@@ -21,3 +21,13 @@ git checkout main
 git pull
 git checkout -b <name of branch>
 git branch --set-upstream-to=origin/<name of remote branch> <name of local branch> note: these names can be the same
+
+# go back to main
+```sh
+git checkout main
+```
+
+# To push updates to Heroku
+```sh
+
+```
