@@ -34,16 +34,13 @@ async def predict(item: Item):
     """
     Eventually, this bad boy is going to predict Kickstarter success
     ### Request Body
-    - `Fundraising Goal (x1)`: positive float
-    - `Fundraising Timeline (x2)`: integer
-    - `Country (x4)`: string
-    - `Category (x5)`: string
-    - `Sub-Category (x6)`: string
+    - `goal (x1)`: positive float
+    - `campaign_length (x2)`: integer
+    - `country (x3)`: string
+    - `category (x4)`: string
+    - `sub-category (x5)`: string
     ### Response
     - `prediction`: boolean, at random
-    - `predict_proba`: float between 0.5 and 1.0, 
-    representing the predicted class's probability
-    Replace the placeholder docstring and fake predictions with your own model.
     """
 
     X_new = item.to_df()
