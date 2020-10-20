@@ -14,7 +14,9 @@ class Item(BaseModel):
 
     x1: float = Field(..., example=10000)
     x2: int = Field(..., example=8)
-    x3: str = Field(..., example='kitten mittens')
+    x3: str = Field(..., example='Canada')
+    x4: str = Field(..., example='Science')
+    x5: str = Field(..., example='Material Thread Science')
 
     def to_df(self):
         """Convert pydantic object to pandas dataframe with 1 row."""
@@ -34,7 +36,9 @@ async def predict(item: Item):
     ### Request Body
     - `Fundraising Goal (x1)`: positive float
     - `Fundraising Timeline (x2)`: integer
-    - `Description of the Project (x3)`: string
+    - `Country (x4)`: string
+    - `Category (x5)`: string
+    - `Sub-Category (x6)`: string
     ### Response
     - `prediction`: boolean, at random
     - `predict_proba`: float between 0.5 and 1.0, 
@@ -47,12 +51,12 @@ async def predict(item: Item):
     def will_it_work():
         y_pred = random.choice([True, False])
         if (y_pred == True):
-            return 'It will work!'
+            return 1
         else:
-            return 'Think of something else...' 
+            return 0 
     y_pred_proba = random.random() / 2 + 0.5
     #This is the JSON we will pass on to the front end
     return {
         'prediction': will_it_work(),
-        'probability': y_pred_proba
+        # 'probability': y_pred_proba
     }

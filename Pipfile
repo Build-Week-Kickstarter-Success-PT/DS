@@ -14,6 +14,11 @@ fastapi = "*"
 uvicorn = "*"
 plotly = "*"
 requests = "*"
+sklearn = "*"
+category-encoders = "*"
+numpy = "*"
+eli5 = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.8"
