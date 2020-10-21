@@ -25,9 +25,10 @@ git branch --set-upstream-to=origin/<name of remote branch> <name of local branc
 # go back to main
 ```sh
 git checkout main
+git pull origin main
 ```
 
 # To push updates to Heroku
 ```sh
-
+git push heroku main
 ```
