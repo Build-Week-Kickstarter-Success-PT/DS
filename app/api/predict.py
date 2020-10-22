@@ -17,6 +17,7 @@ class Item(BaseModel):
     x3: str = Field(..., example='Canada')
     x4: str = Field(..., example='Science')
     x5: str = Field(..., example='Material Thread Science')
+    x6: str = Field(..., example='I am making somthing that will do something')
 
     def to_df(self):
         """Convert pydantic object to pandas dataframe with 1 row."""
@@ -39,6 +40,7 @@ async def predict(item: Item):
     - `country (x3)`: string
     - `category (x4)`: string
     - `sub-category (x5)`: string
+    - `description (x6)`: string
     ### Response
     - `prediction`: boolean, at random
     """
