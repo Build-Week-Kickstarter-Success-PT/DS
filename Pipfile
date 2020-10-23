@@ -19,6 +19,8 @@ category-encoders = "*"
 numpy = "*"
 eli5 = "*"
 xgboost = "*"
+statsmodels = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.8"
