@@ -56,6 +56,6 @@ async def predict(item: Item):
     y_pred_proba = random.random() / 2 + 0.5
     #This is the JSON we will pass on to the front end
     return {
-        'prediction': will_it_work(),
-        # 'probability': y_pred_proba
+        # 'prediction': will_it_work(),
+         'probability': y_pred_proba
     }
